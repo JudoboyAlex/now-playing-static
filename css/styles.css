@@ -36,14 +36,12 @@ figure {
   padding: 0;
 }
 
-
 /* CLEARFIX - for ensuring floated elements are contained in their parent */
 .clearfix::after {
   content: "";
   display: table;
   clear: both;
 }
-
 
 /* NAVIGATION styles */
 .site-logo {
@@ -78,7 +76,8 @@ figure {
   width: 20%;
   height: 60px;
   padding: 0.75em;
-  font-family: "Montserrat", "Source Code Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Montserrat", "Source Code Pro", "Helvetica Neue", Helvetica,
+    Arial, sans-serif;
   font-size: 0.6em;
   text-align: center;
   text-transform: uppercase;
@@ -98,7 +97,6 @@ figure {
   display: block;
   margin-top: 0.5em;
 }
-
 
 /* MOVIE styles */
 .movie {
@@ -147,7 +145,8 @@ figure {
 }
 
 .movie-title-label {
-  font-family: "Montserrat", "Source Code Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Montserrat", "Source Code Pro", "Helvetica Neue", Helvetica,
+    Arial, sans-serif;
   font-size: 0.7em;
   line-height: 1;
   text-transform: uppercase;
@@ -160,7 +159,6 @@ figure {
   font-size: 2em;
   line-height: 1.1;
 }
-
 
 /* FOOTER styles */
 .site-footer {
@@ -185,7 +183,6 @@ figure {
   margin-right: 0;
 }
 
-
 .about {
   background-color: #333333;
   color: #ffffff;
@@ -194,4 +191,103 @@ figure {
 
 .about > p {
   margin: 0;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    margin: 0;
+    padding-bottom: 0px;
+    background-color: #e8e8e8;
+  }
+
+  .site-logo {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    width: 70px;
+    height: 70px;
+    margin: 0;
+    z-index: 100;
+  }
+
+  .site-nav {
+    position: fixed;
+    height: 100%;
+    width: 0;
+    top: 6rem;
+    left: 1.15rem;
+    z-index: 100;
+    background-color: #ffffff;
+  }
+
+  .site-nav-list,
+  .footer-nav-list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  .site-nav-item {
+    float: left;
+    width: 30%;
+    height: 90px;
+    padding: 1em 0.75em;
+    font-family: "Montserrat", "Source Code Pro", "Helvetica Neue", Helvetica,
+      Arial, sans-serif;
+    font-size: 0.75em;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .site-nav-item > .fa {
+    font-size: 3.5rem;
+  }
+
+  .site-nav-item:hover {
+    background-color: #333333;
+    color: #ffffff;
+    cursor: pointer;
+  }
+
+  .site-nav-item-label {
+    display: block;
+    margin-top: 0.5em;
+  }
+
+  .movie-poster {
+    display: contents;
+  }
+
+  .movie-overview {
+    display: contents;
+  }
+
+  .movie {
+    position: relative;
+    left: 6.5rem;
+  }
+
+  .site-nav-item-label {
+    display: block;
+    margin-top: 0.5em;
+  }
+}
+
+@media screen and (min-width: 992px) {
+
+  main article .movie-details .movie-overview:not(:first-child){
+    display: none;
+  }
+
+
+  main{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-gap: 0;
+  }
+
+  main .movie:first-child{
+    grid-column: 1/4;
+  }
+
 }
