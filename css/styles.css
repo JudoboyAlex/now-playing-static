@@ -275,7 +275,7 @@ figure {
 
 @media screen and (min-width: 992px) {
 
-  main article .movie-details .movie-overview:not(:first-child){
+  article:not(:first-child) .movie-overview {
     display: none;
   }
 
